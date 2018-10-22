@@ -19,8 +19,8 @@
             height: 60px;
             width: 100%;
             position: fixed;
-            z-index: 2;
-            box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15);
+            z-index: 10;
+            box-shadow: 0 3px 12px rgba(27, 31, 35, 0.35);
         }
         #menu{
             position: fixed;
@@ -28,6 +28,8 @@
             right: 60px;
             width: 150px;
             height: 60px;
+            z-index: 11;
+            transition: background-color 0.3s ease;
         }
         #menu:hover{
             background-color: #447e7c;
@@ -37,6 +39,7 @@
             top: 20px;
             right: 120px;
             color: #fff;
+            z-index: 12;
         }
         #h_menu{
             position: fixed;
@@ -48,17 +51,31 @@
             border: 1px solid rgba(0, 0, 0, 0.25);
             border-radius: 3px;
             box-shadow: 0 3px 12px rgba(27, 31, 35, 0.45);
-            z-index: 10;
+            z-index: -1;
+            animation-name: slide-down;
+            animation-duration: 0.4s;
+        }
+        @keyframes slide-down {
+            0% {top: 0; opacity: 0}
+            50% {top: 30px; opacity: 0}
+            100% {top: 60px; opacity: 1}
+        }
+        @keyframes turning-on {
+            0% {opacity: 0}
+            100% {opacity: 1}
         }
         #arrow{
             position: fixed;
             top: 44px;
             right: 115px;
+            animation-name: turning-on;
+            animation-duration: 0.4s;
         }
         ol{
             padding: 8px 10px 8px 15px;
             margin-top: 1px;
             margin-bottom: 0;
+            z-index: 0;
         }
         ol:hover{
             background-color: #488e8c;
@@ -85,6 +102,7 @@
             border-radius: 3px;
             border: 1px solid #BFBFBF;
             box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15);
+            transition: background-color 0.3s ease;
         }
         #st{
             position: sticky;
@@ -118,6 +136,7 @@
         .but{
             width: 50px;
             height: 50px;
+            transition: background-color 0.3s ease;
         }
         .but:hover{
             background-color: #488e8c;

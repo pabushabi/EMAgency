@@ -10,4 +10,3 @@ function enMenu() {
 function disMenu() {
     menu.style.display = "none";
 }
-
