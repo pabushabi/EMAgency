@@ -41,6 +41,18 @@
             color: #fff;
             z-index: 12;
         }
+        #con_menu{
+            position: absolute;
+            width: 148px;
+            height: 110px;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            border-radius: 3px;
+            box-shadow: 0 3px 12px rgba(27, 31, 35, 0.45);
+            z-index: 12;
+            animation-name: turning-on;
+            animation-duration: 0.4s;
+        }
         #h_menu{
             position: fixed;
             top: 60px;
@@ -173,6 +185,12 @@
         </div>
     </div>
 </header>
+
+<div id="con_menu" style="display: none">
+    <a href="https://google.com"><ol>1 элемент</ol></a>
+    <a href="https://github.com"><ol>2 элемент</ol></a>
+    <a href="https://habrahabr.ru"><ol>3 элемент</ol></a>
+</div>
 
 <div id="r_bar">
     <a href="index.html">
