@@ -64,17 +64,26 @@ back.addEventListener("click", function (e) {
     history.back();
 });
 
+var backgrd = document.getElementById("backgrd");
 var big = document.getElementById("big_article");
 var close = document.getElementById("close");
 var article = document.getElementsByClassName("art");
 [].forEach.call(article, function (el) {
     el.addEventListener("click", function (e) {
         console.log(e);
+        backgrd.style.display = "block";
         big.style.display = "block";
     });
 });
 
-close.addEventListener("click", function (e) {
-    big.style.display = "none";
+big.addEventListener("click", function (ev) {
+    ev.stopPropagation();
 });
 
+function close_it() {
+    backgrd.style.display = "none";
+    big.style.display = "none";
+}
+
+close.addEventListener("click", close_it,false);
+backgrd.addEventListener("click", close_it, false);
