@@ -1,0 +1,201 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+body {
+    margin: 0;
+}
+header {
+    background: #376E6C;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 0 3px 12px rgba(27, 31, 35, 0.35);
+}
+#menu{
+    position: fixed;
+    top: 0;
+    right: 60px;
+    width: 150px;
+    height: 60px;
+    z-index: 11;
+    transition: background-color 0.3s ease;
+}
+#menu:hover{
+    background-color: rgba(255, 255, 255, 0.05);
+}
+#b_menu{
+    position: fixed;
+    top: 20px;
+    right: 120px;
+    color: #fff;
+    z-index: 12;
+}
+#con_menu{
+    position: absolute;
+    width: 148px;
+    height: 145px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    box-shadow: 6px 6px 20px rgba(27, 31, 35, 0.35);
+    z-index: 120;
+    animation-name: turning-on;
+    animation-duration: 0.4s;
+}
+#h_menu{
+    position: fixed;
+    top: 60px;
+    right: 60px;
+    background-color: #ffffff;
+    width: 148px;
+    height: 110px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    box-shadow: 0 3px 12px rgba(27, 31, 35, 0.45);
+    z-index: -1;
+    animation-name: slide-down;
+    animation-duration: 0.4s;
+}
+@keyframes slide-down {
+    0% {top: 0; opacity: 0}
+    50% {top: 30px; opacity: 0}
+    100% {top: 60px; opacity: 1}
+}
+@keyframes turning-on {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+#arrow{
+    position: fixed;
+    top: 44px;
+    right: 115px;
+    animation-name: turning-on;
+    animation-duration: 0.4s;
+}
+ol{
+    padding: 8px 10px 8px 15px;
+    margin-top: 1px;
+    margin-bottom: 0;
+    z-index: 0;
+}
+ol:hover{
+    background-color: #488e8c;
+    border-radius: inherit;
+}
+h1#head {
+    text-align: center;
+    line-height: 60px;
+    font-weight: lighter;
+    color: #fff;
+    margin: 0;
+}
+#main{
+    margin: 0 200px 0 200px;
+    top: 70px;
+    position: absolute;
+}
+article {
+    padding: 10px;
+    margin: 10px;
+    background: #fff;
+    flex-direction: row;
+    flex: 1 400px;
+    border-radius: 3px;
+    border: 1px solid #BFBFBF;
+    box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+#big_article{
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    z-index: 100;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #BFBFBF;
+    box-shadow: 0 0 750px rgba(27, 27, 27, 0.55);
+    animation-name: turning-on;
+    animation-duration: 0.4s;
+}
+#bid_b{
+    margin: 5%;
+    font-size: larger;
+
+}
+#bid_h::first-letter{
+    color: hotpink;
+}
+#bid_h{
+    margin-top: 4%;
+    text-align: center;
+    font-weight: normal;
+}
+#close{
+    position: fixed;
+    top: 12%;
+    right: 11%;
+    cursor: pointer;
+}
+#st{
+    position: sticky;
+    top: 80px;
+    background-color: hotpink;
+}
+article:hover{
+    background-color: #f4f4f4;
+}
+#r_bar{
+    position: fixed;
+    z-index: 2;
+    background-color: #447e7c;
+    height: 150px;
+    width: 50px;
+    top: 250px;
+    right: 0;
+    border-radius: 3px;
+    box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15);
+}
+#s_back{
+    top: 18px;
+    left: 18px;
+    position: absolute;
+}
+#s_up{
+    top: 62px;
+    left: 8px;
+    position: absolute;
+}
+#s_down{
+    top: 106px;
+    left: 8px;
+    position: absolute;
+}
+.but{
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.but:hover{
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: inherit;
+}
+a{
+    text-decoration: none;
+    color: #111111;
+}
+a:hover{
+    border-radius: inherit;
+}
+::selection{
+    background: #7092bf;
+    color: #fff;
+}

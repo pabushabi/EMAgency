@@ -12,7 +12,6 @@ function disMenu() {
 }
 
 var con_m = document.getElementById("con_menu");
-
 (function () {
     addEventListener("contextmenu", 
         function (e) {
