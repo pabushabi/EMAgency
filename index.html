@@ -32,7 +32,7 @@
             transition: background-color 0.3s ease;
         }
         #menu:hover{
-            background-color: #447e7c;
+            background-color: rgba(255, 255, 255, 0.05);
         }
         #b_menu{
             position: fixed;
@@ -44,11 +44,11 @@
         #con_menu{
             position: absolute;
             width: 148px;
-            height: 110px;
+            height: 145px;
             background-color: #fff;
             border: 1px solid rgba(0, 0, 0, 0.25);
             border-radius: 3px;
-            box-shadow: 0 3px 12px rgba(27, 31, 35, 0.45);
+            box-shadow: 6px 6px 20px rgba(27, 31, 35, 0.35);
             z-index: 12;
             animation-name: turning-on;
             animation-duration: 0.4s;
@@ -93,7 +93,7 @@
             background-color: #488e8c;
             border-radius: inherit;
         }
-        h1 {
+        h1#head {
             text-align: center;
             line-height: 60px;
             font-weight: lighter;
@@ -115,6 +115,40 @@
             border: 1px solid #BFBFBF;
             box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15);
             transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        #big_article{
+            position: fixed;
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: 10%;
+            z-index: 100;
+            background: #fff;
+            border-radius: 3px;
+            border: 1px solid #BFBFBF;
+            box-shadow: 0 0 750px rgba(27, 27, 27, 0.55);
+            animation-name: turning-on;
+            animation-duration: 0.4s;
+        }
+        #bid_b{
+            margin: 5%;
+            font-size: larger;
+
+        }
+        #bid_h::first-letter{
+            color: hotpink;
+        }
+        #bid_h{
+            margin-top: 4%;
+            text-align: center;
+            font-weight: normal;
+        }
+        #close{
+            position: fixed;
+            top: 12%;
+            right: 11%;
+            cursor: pointer;
         }
         #st{
             position: sticky;
@@ -128,9 +162,9 @@
             position: fixed;
             z-index: 2;
             background-color: #447e7c;
-            height: 350px;
+            height: 150px;
             width: 50px;
-            top: 150px;
+            top: 250px;
             right: 0;
             border-radius: 3px;
             box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15);
@@ -145,13 +179,19 @@
             left: 8px;
             position: absolute;
         }
+        #s_down{
+            top: 106px;
+            left: 8px;
+            position: absolute;
+        }
         .but{
             width: 50px;
             height: 50px;
             transition: background-color 0.3s ease;
+            cursor: pointer;
         }
         .but:hover{
-            background-color: #488e8c;
+            background-color: rgba(255, 255, 255, 0.05);
             border-radius: inherit;
         }
         a{
@@ -171,7 +211,7 @@
 </head>
 <body>
 <header id="header">
-    <h1>Simple flexbox example</h1>
+    <h1 id="head">Simple flexbox example</h1>
     <div id="menu" onmouseover="enMenu()" onmouseout="disMenu()">
         <span id="b_menu">Menu</span>
 
@@ -187,142 +227,155 @@
 </header>
 
 <div id="con_menu" style="display: none">
-    <a href="https://google.com"><ol>1 элемент</ol></a>
-    <a href="https://github.com"><ol>2 элемент</ol></a>
-    <a href="https://habrahabr.ru"><ol>3 элемент</ol></a>
+    <a href="https://google.com"><ol>Google</ol></a>
+    <a href="https://github.com"><ol>Github</ol></a>
+    <a href="https://habrahabr.ru"><ol>Habrahabr</ol></a>
+    <a href="https://cyberforum.ru"><ol>Cyberforum</ol></a>
+</div>
+
+<div id="big_article" style="display: none">
+    <svg id="close" width="20" height="20">
+        <polyline style="stroke-linejoin: round; stroke-linecap: round; stroke: black; stroke-width: 2; fill: none" points="0 0, 20 20"></polyline>
+        <polyline style="stroke-linejoin: round; stroke-linecap: round; stroke: black; stroke-width: 2; fill: none" points="0 20, 20 0"></polyline>
+    </svg>
+    <h1 id="bid_h">Article</h1>
+    <p id="bid_b">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
 <div id="r_bar">
-    <a href="index.html">
-        <div class="but">
-            <svg id="s_back" width="40" height="40">
-                <polyline id="poly" style="stroke-linejoin:round; stroke-linecap:round; stroke:white; stroke-width:2; fill:none" points="10 3, 3 10, 10 17"></polyline>
-            </svg>
-        </div>
-    </a>
-    <a href=#>
-        <div class="but">
-            <svg id="s_up" width="40" height="40">
-                <polyline id="poly" style="stroke-linejoin:round; stroke-linecap:round; stroke:white; stroke-width:2; fill:none" points="10 17, 17 10, 24 17"></polyline>
-            </svg>
-        </div>
-    </a>
+    <div class="but" id="back">
+        <svg id="s_back" width="40" height="40">
+            <polyline id="poly_b" style="stroke-linejoin:round; stroke-linecap:round; stroke:white; stroke-width:2; fill:none" points="10 3, 3 10, 10 17"></polyline>
+        </svg>
+    </div>
+
+    <div class="but" id="up">
+        <svg id="s_up" width="40" height="40">
+            <polyline id="poly_u" style="stroke-linejoin:round; stroke-linecap:round; stroke:white; stroke-width:2; fill:none" points="10 17, 17 10, 24 17"></polyline>
+        </svg>
+    </div>
+
+    <div class="but" id="down">
+        <svg id="s_down" width="40" height="40">
+            <polyline id="poly_d" style="stroke-linejoin:round; stroke-linecap:round; stroke:white; stroke-width:2; fill:none" points="10 17, 17 24, 24 17"></polyline>
+        </svg>
+    </div>
 </div>
 <div id="main">
 <section>
-    <article>
+    <article class="art">
         <h2>1 article</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article oncontextmenu="return false">
+    <article oncontextmenu="return false" class="art">
         <h2>2 article</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article>
+    <article class="art">
         <h2>3 article</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
     </article>
 
-    <article>
+    <article class="art">
         <h2>4 article</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article>
+    <article class="art">
         <h2>5 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article>
+    <article class="art">
         <h2>6 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article id="st">
+    <article id="st" class="art">
         <h2>7 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article>
+    <article class="art">
         <h2>8 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article>
+    <article class="art">
         <h2>9 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article>
+    <article class="art">
         <h2>10 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article>
+    <article class="art">
         <h2>11 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article>
+    <article class="art">
         <h2>12 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article>
+    <article class="art">
         <h2>13 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
     </article>
 
-    <article>
+    <article class="art">
         <h2>14 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article>
+    <article class="art">
         <h2>15 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article>
+    <article class="art">
         <h2>16 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article>
+    <article class="art">
         <h2>17 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article>
+    <article class="art">
         <h2>18 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article>
+    <article class="art">
         <h2>19 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
 
-    <article>
+    <article class="art">
         <h2>20 article</h2>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
