@@ -1,6 +1,6 @@
 "use strict";
 console.log("Hi^^");
-
+var fish = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 var menu = document.getElementById("h_menu");
 
 function enMenu() {
@@ -10,10 +10,16 @@ function enMenu() {
 function disMenu() {
     menu.style.display = "none";
 }
+var text = document.getElementsByClassName("text");
+var big_text = document.getElementById("big_b");
 
 var con_m = document.getElementById("con_menu");
 (function () {
-    addEventListener("contextmenu", 
+    for (var i = 0; i < 20; i++){
+        text[i].innerHTML = fish;
+    }
+    big_text.innerHTML = fish;
+    addEventListener("contextmenu",
         function (e) {
             e.preventDefault();
             console.log(e);
@@ -71,3 +77,4 @@ var article = document.getElementsByClassName("art");
 close.addEventListener("click", function (e) {
     big.style.display = "none";
 });
+

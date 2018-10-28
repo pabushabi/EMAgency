@@ -125,15 +125,15 @@ article {
     animation-name: turning-on;
     animation-duration: 0.4s;
 }
-#bid_b{
+#big_b{
     margin: 5%;
     font-size: larger;
 
 }
-#bid_h::first-letter{
+#big_h::first-letter{
     color: hotpink;
 }
-#bid_h{
+#big_h{
     margin-top: 4%;
     text-align: center;
     font-weight: normal;
