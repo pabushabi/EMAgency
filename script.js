@@ -1,7 +1,7 @@
 "use strict";
 console.log("Hi^^");
-var fish = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-var menu = document.getElementById("h_menu");
+let fish = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+let menu = document.getElementById("h_menu");
 
 function enMenu() {
     menu.style.display = "block";
@@ -10,14 +10,13 @@ function enMenu() {
 function disMenu() {
     menu.style.display = "none";
 }
-var text = document.getElementsByClassName("text");
-var big_text = document.getElementById("big_b");
+let big_text = document.getElementById("big_b");
 
-var con_m = document.getElementById("con_menu");
+$(function () {
+    $(".text").html(fish);
+});
+let con_m = document.getElementById("con_menu");
 (function () {
-    for (var i = 0; i < 20; i++){
-        text[i].innerHTML = fish;
-    }
     big_text.innerHTML = fish;
     addEventListener("contextmenu",
         function (e) {
@@ -43,7 +42,7 @@ var con_m = document.getElementById("con_menu");
         })
 })();
 
-var scroll_u = document.getElementById("up");
+let scroll_u = document.getElementById("up");
 scroll_u.addEventListener("click", function (e) {
     window.scrollTo({
         top: 0,
@@ -51,7 +50,7 @@ scroll_u.addEventListener("click", function (e) {
     });
 });
 
-var scroll_d = document.getElementById("down");
+let scroll_d = document.getElementById("down");
 scroll_d.addEventListener("click", function (e) {
     window.scrollTo({
         top: 10000,
@@ -59,15 +58,15 @@ scroll_d.addEventListener("click", function (e) {
     });
 });
 
-var back = document.getElementById("back");
-back.addEventListener("click", function (e) {
+$("#back").on("click", function (e) {
     history.back();
 });
 
-var backgrd = document.getElementById("backgrd");
-var big = document.getElementById("big_article");
-var close = document.getElementById("close");
-var article = document.getElementsByClassName("art");
+let backgrd = document.getElementById("backgrd");
+let tt = document.getElementById("new_back");
+let big = document.getElementById("big_article");
+let close = document.getElementById("close");
+let article = document.getElementsByClassName("art");
 [].forEach.call(article, function (el) {
     el.addEventListener("click", function (e) {
         console.log(e);
