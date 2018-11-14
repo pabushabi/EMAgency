@@ -16,7 +16,7 @@ $(function () {
     $(".text").html(fish);
 });
 let texts = document.getElementsByClassName("text");
-texts[2].innerHTML = fish + fish;
+$(texts[2]).html(fish + fish);
 let con_m = document.getElementById("con_menu");
 (function () {
     big_text.innerHTML = fish;
