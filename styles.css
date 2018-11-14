@@ -34,6 +34,7 @@ header {
     right: 120px;
     color: #fff;
     z-index: 12;
+    cursor: default;
 }
 #con_menu{
     position: absolute;
@@ -94,6 +95,7 @@ h1#head {
     font-weight: lighter;
     color: #fff;
     margin: 0;
+    cursor: default;
 }
 #main{
     margin: 0 200px 0 200px;
