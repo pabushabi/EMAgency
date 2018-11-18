@@ -155,11 +155,6 @@ article {
     right: 11%;
     cursor: pointer;
 }
-#st{
-    position: sticky;
-    top: 80px;
-    background-color: hotpink;
-}
 article:hover{
     background-color: #f4f4f4;
 }
