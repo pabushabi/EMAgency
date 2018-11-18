@@ -97,6 +97,18 @@ h1#head {
     margin: 0;
     cursor: default;
 }
+h1#head::before{
+    content: "";
+    width: 50px;
+    height: 40px;
+    margin-right: 10px;
+    filter: invert(100%);
+    display: inline-block;
+    background-image: url("resources/icon.svg");
+    background-size: 50px 50px;
+    position: relative;
+    top: 2px;
+}
 #main{
     margin: 0 200px 0 200px;
     top: 70px;
