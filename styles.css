@@ -19,7 +19,8 @@ header {
 #menu{
     position: fixed;
     top: 0;
-    right: 60px;
+    right: 0;
+    margin-right: 4%;
     width: 150px;
     height: 60px;
     z-index: 11;
@@ -29,9 +30,9 @@ header {
     background-color: rgba(255, 255, 255, 0.05);
 }
 #b_menu{
-    position: fixed;
+    position: absolute;
     top: 20px;
-    right: 120px;
+    right: 55px;
     color: #fff;
     z-index: 12;
     cursor: default;
@@ -51,7 +52,8 @@ header {
 #h_menu{
     position: fixed;
     top: 60px;
-    right: 60px;
+    right: 0;
+    margin-right: 4%;
     background-color: #ffffff;
     width: 148px;
     height: 110px;
@@ -72,9 +74,9 @@ header {
     100% {opacity: 1}
 }
 #arrow{
-    position: fixed;
-    top: 44px;
-    right: 115px;
+    position: absolute;
+    top: -16px;
+    right: 35%;
     animation-name: turning-on;
     animation-duration: 0.4s;
     z-index: -2;
@@ -90,9 +92,9 @@ ol:hover{
     border-radius: inherit;
 }
 h1#head {
-    line-height: 60px;
     font-weight: lighter;
     color: #fff;
+    font-size: x-large;
     margin: 0 0 0 5%;
     cursor: default;
 }
@@ -124,7 +126,7 @@ article {
     box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15);
     transition: background-color 0.3s ease;
     cursor: pointer;
-    overflow: auto;
+    overflow: hidden;
     height: 220px;
 }
 article:nth-child(6){
