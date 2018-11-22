@@ -92,7 +92,7 @@ $("#back").on("click", function (e) {
 });
 
 let backgrd = document.getElementById("backgrd");
-let tt = document.getElementById("new_back");
+let big_b = document.getElementById("big_b");
 let big = document.getElementById("big_article");
 let close = document.getElementById("close");
 let article = document.getElementsByClassName("art");
@@ -104,6 +104,7 @@ let big_h = document.getElementById('big_h');
         big.style.display = "block";
         console.log(e.target.id);
         big_h.innerText = e.target.id + ' article';
+        big_b.innerText = e.target.id + ' ' + fish;
     });
 });
 

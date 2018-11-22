@@ -128,6 +128,12 @@ article {
     overflow: auto;
     height: 220px;
 }
+article:nth-child(6){
+    background-color: hotpink;
+}
+article:hover{
+    background-color: #f4f4f4;
+}
 #backgrd{
     position: fixed;
     width: 100%;
@@ -166,9 +172,6 @@ article {
     top: 12%;
     right: 11%;
     cursor: pointer;
-}
-article:hover{
-    background-color: #f4f4f4;
 }
 #r_bar{
     position: fixed;
