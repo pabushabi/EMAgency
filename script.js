@@ -24,7 +24,7 @@ let menu = document.getElementById("h_menu");
     }
 })();
 
-if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i)){
+if (navigator.userAgent.match(/Android/i)){
     document.getElementById("main").style.marginLeft = 2 + '%';
     document.getElementById("main").style.marginRight = 2 + '%';
     document.getElementById("head").style.fontSize = "x-large";
