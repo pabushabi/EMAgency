@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>E-Agency</title>
     <link href="styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
@@ -12,53 +12,79 @@
 <body>
 <header id="header">
     <h1 id="head">Employer agency</h1>
-    <div id="menu" onmouseover="enMenu()" onmouseout="disMenu()">
+    <div id="menu" onmouseout="disMenu()" onmouseover="enMenu()">
         <span id="b_menu">Menu</span>
 
         <div id="h_menu" style="display: none">
-            <svg id="arrow" width="40" height="40">
-                <polyline id="poly" style="stroke-linejoin:round; stroke-linecap:round; stroke:white; stroke-width:2px; fill:white" points="10 17, 17 10, 24 17, 10 17"></polyline>
+            <svg height="40" id="arrow" width="40">
+                <polyline id="poly"
+                          points="10 17, 17 10, 24 17, 10 17"
+                          style="stroke-linejoin:round; stroke-linecap:round; stroke:white; stroke-width:2px; fill:white"></polyline>
             </svg>
-            <a href="https://google.com"><ol>Google</ol></a>
-            <a href="https://github.com"><ol>Github</ol></a>
-            <a href="https://habr.com"><ol>Habr</ol></a>
+            <a href="https://google.com">
+                <ol>Google</ol>
+            </a>
+            <a href="https://github.com">
+                <ol>Github</ol>
+            </a>
+            <a href="https://habr.com">
+                <ol>Habr</ol>
+            </a>
         </div>
     </div>
 </header>
 
 <div id="con_menu" style="display: none">
-    <a href="https://google.com"><ol>Google</ol></a>
-    <a href="https://github.com"><ol>Github</ol></a>
-    <a href="https://habr.com"><ol>Habr</ol></a>
-    <a href="https://cyberforum.ru"><ol>Cyberforum</ol></a>
+    <a href="https://google.com">
+        <ol>Google</ol>
+    </a>
+    <a href="https://github.com">
+        <ol>Github</ol>
+    </a>
+    <a href="https://habr.com">
+        <ol>Habr</ol>
+    </a>
+    <a href="https://cyberforum.ru">
+        <ol>Cyberforum</ol>
+    </a>
 </div>
 <div id="backgrd" style="display: none">
     <div id="big_article" style="display: none">
-        <svg id="close" width="20" height="20">
-            <polyline style="stroke-linejoin: round; stroke-linecap: round; stroke: black; stroke-width: 2px; fill: none" points="0 0, 20 20"></polyline>
-            <polyline style="stroke-linejoin: round; stroke-linecap: round; stroke: black; stroke-width: 2px; fill: none" points="0 20, 20 0"></polyline>
+        <svg height="20" id="close" width="20">
+            <polyline
+                    points="0 0, 20 20"
+                    style="stroke-linejoin: round; stroke-linecap: round; stroke: black; stroke-width: 2px; fill: none"></polyline>
+            <polyline
+                    points="0 20, 20 0"
+                    style="stroke-linejoin: round; stroke-linecap: round; stroke: black; stroke-width: 2px; fill: none"></polyline>
         </svg>
-        <h1 id="big_h"> </h1>
-        <p id="big_b"> </p>
+        <h1 id="big_h"></h1>
+        <p id="big_b"></p>
     </div>
 </div>
 
 <div id="r_bar">
     <div class="but" id="back">
-        <svg id="s_back" width="40" height="40">
-            <polyline id="poly_b" style="stroke-linejoin:round; stroke-linecap:round; stroke:white; stroke-width:2px; fill:none" points="10 3, 3 10, 10 17"></polyline>
+        <svg height="40" id="s_back" width="40">
+            <polyline id="poly_b"
+                      points="10 3, 3 10, 10 17"
+                      style="stroke-linejoin:round; stroke-linecap:round; stroke:white; stroke-width:2px; fill:none"></polyline>
         </svg>
     </div>
 
     <div class="but" id="up">
-        <svg id="s_up" width="40" height="40">
-            <polyline id="poly_u" style="stroke-linejoin:round; stroke-linecap:round; stroke:white; stroke-width:2px; fill:none" points="10 17, 17 10, 24 17"></polyline>
+        <svg height="40" id="s_up" width="40">
+            <polyline id="poly_u"
+                      points="10 17, 17 10, 24 17"
+                      style="stroke-linejoin:round; stroke-linecap:round; stroke:white; stroke-width:2px; fill:none"></polyline>
         </svg>
     </div>
 
     <div class="but" id="down">
-        <svg id="s_down" width="40" height="40">
-            <polyline id="poly_d" style="stroke-linejoin:round; stroke-linecap:round; stroke:white; stroke-width:2px; fill:none" points="10 17, 17 24, 24 17"></polyline>
+        <svg height="40" id="s_down" width="40">
+            <polyline id="poly_d"
+                      points="10 17, 17 24, 24 17"
+                      style="stroke-linejoin:round; stroke-linecap:round; stroke:white; stroke-width:2px; fill:none"></polyline>
         </svg>
     </div>
 </div>

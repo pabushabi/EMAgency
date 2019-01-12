@@ -1,13 +1,16 @@
 html {
     font-family: 'Roboto', sans-serif;
 }
-section{
+
+section {
     display: flex;
     flex-wrap: wrap;
 }
+
 body {
     margin: 0;
 }
+
 header {
     background: #376E6C;
     height: 60px;
@@ -16,7 +19,8 @@ header {
     z-index: 10;
     box-shadow: 0 3px 12px rgba(27, 31, 35, 0.35);
 }
-#menu{
+
+#menu {
     position: fixed;
     top: 0;
     right: 0;
@@ -26,10 +30,12 @@ header {
     z-index: 11;
     transition: background-color 0.3s ease;
 }
-#menu:hover{
+
+#menu:hover {
     background-color: rgba(255, 255, 255, 0.05);
 }
-#b_menu{
+
+#b_menu {
     position: absolute;
     top: 20px;
     right: 55px;
@@ -37,7 +43,8 @@ header {
     z-index: 12;
     cursor: default;
 }
-#con_menu{
+
+#con_menu {
     position: absolute;
     width: 148px;
     height: 145px;
@@ -49,7 +56,8 @@ header {
     animation-name: turning-on;
     animation-duration: 0.4s;
 }
-#h_menu{
+
+#h_menu {
     position: fixed;
     top: 60px;
     right: 0;
@@ -64,16 +72,41 @@ header {
     animation-name: slide-down;
     animation-duration: 0.4s;
 }
+
 @keyframes slide-down {
-    0% {top: 0; opacity: 0}
-    50% {top: 30px; opacity: 0}
-    100% {top: 60px; opacity: 1}
+    0% {
+        top: 0;
+        opacity: 0
+    }
+    50% {
+        top: 30px;
+        opacity: 0
+    }
+    100% {
+        top: 60px;
+        opacity: 1
+    }
 }
+
 @keyframes turning-on {
-    0% {opacity: 0}
-    100% {opacity: 1}
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
 }
-#arrow{
+
+@keyframes turning-off {
+    0% {
+        opacity: 100%
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+#arrow {
     position: absolute;
     top: -16px;
     right: 35%;
@@ -81,39 +114,45 @@ header {
     animation-duration: 0.4s;
     z-index: -2;
 }
-ol{
+
+ol {
     padding: 8px 10px 8px 15px;
     margin-top: 1px;
     margin-bottom: 0;
     z-index: 0;
 }
-ol:hover{
+
+ol:hover {
     background-color: #488e8c;
     border-radius: inherit;
 }
+
 h1#head {
     font-weight: lighter;
     color: #fff;
     margin: 0 0 0 5%;
     cursor: default;
 }
-h1#head::before{
+
+h1#head::before {
     content: "";
     width: 50px;
     height: 40px;
     margin-right: 10px;
     filter: invert(100%);
     display: inline-block;
-    background-image: url("resources/icon.svg");
     background-size: 50px 50px;
+    background: url("resources/icon.svg") no-repeat;
     position: relative;
     top: 2px;
 }
-#main{
+
+#main {
     margin: 0 16% 0 16%;
     top: 70px;
     position: absolute;
 }
+
 article {
     padding: 10px;
     margin: 10px;
@@ -128,20 +167,26 @@ article {
     overflow: hidden;
     height: 220px;
 }
-article:nth-child(6){
+
+article:nth-child(3) {
     background-color: hotpink;
+    position: sticky;
+    top: 70px;
 }
-article:hover{
+
+article:hover {
     background-color: #f4f4f4;
 }
-#backgrd{
+
+#backgrd {
     position: fixed;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.35);
     z-index: 99;
 }
-#big_article{
+
+#big_article {
     position: fixed;
     width: 80%;
     height: 80%;
@@ -155,25 +200,30 @@ article:hover{
     animation-name: turning-on;
     animation-duration: 0.4s;
 }
-#big_b{
+
+#big_b {
     margin: 5%;
     font-size: larger;
 }
-#big_h::first-letter{
+
+#big_h::first-letter {
     color: hotpink;
 }
-#big_h{
+
+#big_h {
     margin-top: 4%;
     text-align: center;
     font-weight: normal;
 }
-#close{
+
+#close {
     position: fixed;
     top: 12%;
     right: 11%;
     cursor: pointer;
 }
-#r_bar{
+
+#r_bar {
     position: fixed;
     z-index: 2;
     background-color: #447e7c;
@@ -184,39 +234,47 @@ article:hover{
     border-radius: 3px;
     box-shadow: 0 3px 12px rgba(27, 31, 35, 0.15);
 }
-#s_back{
+
+#s_back {
     top: 18px;
     left: 18px;
     position: absolute;
 }
-#s_up{
+
+#s_up {
     top: 62px;
     left: 8px;
     position: absolute;
 }
-#s_down{
+
+#s_down {
     top: 106px;
     left: 8px;
     position: absolute;
 }
-.but{
+
+.but {
     width: 50px;
     height: 50px;
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
-.but:hover{
+
+.but:hover {
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: inherit;
 }
-a{
+
+a {
     text-decoration: none;
     color: #111111;
 }
-a:hover{
+
+a:hover {
     border-radius: inherit;
 }
-::selection{
+
+::selection {
     background: #7092bf;
     color: #fff;
 }

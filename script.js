@@ -8,15 +8,15 @@ let menu = document.getElementById("h_menu");
     let main = document.getElementById('main');
     section.className = "sec";
     main.appendChild(section);
-    for (let i = 0; i < 20; i++){
+    for (let i = 0; i < 20; i++) {
         let article = document.createElement("article");
         let h2 = document.createElement('h2');
         let p = document.createElement('p');
         article.className = "art";
-        article.id = i+1;
-        h2.id = i+1;
-        p.id = i+1;
-        h2.innerHTML = i+1 + ' article';
+        article.id = i + 1;
+        h2.id = i + 1;
+        p.id = i + 1;
+        h2.innerHTML = i + 1 + ' article';
         p.className = 'text';
         section.appendChild(article);
         article.appendChild(h2);
@@ -24,18 +24,11 @@ let menu = document.getElementById("h_menu");
     }
 })();
 
-if (navigator.userAgent.match(/Android/i)){
+if (navigator.userAgent.match(/Android/i)) {
     document.getElementById("main").style.marginLeft = 2 + '%';
     document.getElementById("main").style.marginRight = 2 + '%';
     document.getElementById("head").style.fontSize = "x-large";
 }
-
-jQuery.ajax({
-    url: '127.0.0.1:3000',
-    success: function (res) {
-        console.log("success")
-    }
-});
 
 function enMenu() {
     menu.style.display = "block";
@@ -44,6 +37,7 @@ function enMenu() {
 function disMenu() {
     menu.style.display = "none";
 }
+
 let big_text = document.getElementById("big_b");
 
 $(function () {
@@ -58,16 +52,14 @@ let con_m = document.getElementById("con_menu");
             e.preventDefault();
             console.log(e);
             con_m.style.display = "block";
-            if ((e.pageX + 150) < document.documentElement.clientWidth){
+            if ((e.pageX + 150) < document.documentElement.clientWidth) {
                 con_m.style.left = e.pageX + 'px';
-            }
-            else {
+            } else {
                 con_m.style.left = e.pageX - 150 + 'px';
             }
-            if ((e.pageY + 145) < document.documentElement.clientHeight){
+            if ((e.pageY + 145) < document.documentElement.clientHeight) {
                 con_m.style.top = e.pageY + 'px';
-            }
-            else {
+            } else {
                 con_m.style.top = e.pageY - 145 + 'px';
             }
         });
@@ -123,5 +115,5 @@ function close_it() {
     big.style.display = "none";
 }
 
-close.addEventListener("click", close_it,false);
+close.addEventListener("click", close_it, false);
 backgrd.addEventListener("click", close_it, false);
